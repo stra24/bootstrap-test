@@ -1,0 +1,15 @@
+.container {
+	background-color: yellow;
+}
+
+.container-fluid {
+	background-color: aquamarine;
+}
+
+.row {
+	background-color: burlywood;
+}
+
+.col-md-6 {
+	background-color: bisque;
+}
