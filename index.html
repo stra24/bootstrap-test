@@ -9,6 +9,131 @@
 </head>
 <body>
 	<!-- 
+		ナビゲーションの見本をBootStrapの公式ページからそのままコピーして使うことが可能。
+		https://skillhub.jp/courses/230/lessons/1640
+		https://getbootstrap.jp/docs/5.3/components/navbar/
+	-->
+	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">Navbar</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+				<a class="nav-link active" aria-current="page" href="#">Home</a>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link" href="#">Features</a>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link" href="#">Pricing</a>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link disabled">Disabled</a>
+				</li>
+			</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- 
+		ビッグイメージ
+			ヒーローエリアと呼ばれる部分に配置される画像のこと。
+
+			w-100クラスには、width: 100%;のスタイル指定が入っています。
+			こちらを加えておくことで、親要素の幅よりも画像が小さかったときも、画像が途切れずに拡大して表示されます。
+
+			親要素（class="img-hidden"の要素）は自作のスタイル
+				大きい画面で見たときに、画像を上から下まですべて表示させたくないので、画像の表示領域の最大の高さを制限している。
+	-->
+	<div class="img-hidden">
+		<img src="grapefruits.jpg" class="w-100 img-fluid" alt="">
+	</div>
+
+	<!-- 
+		カード
+			今回はグリッドカードを使用。
+			https://getbootstrap.jp/docs/5.3/components/card/#%E3%82%B0%E3%83%AA%E3%83%83%E3%83%89%E3%82%AB%E3%83%BC%E3%83%89
+
+		container-m
+			自作スタイル。margin-topを指定している。
+	-->
+	<div class="container container-m">
+		<div class="row row-cols-1 row-cols-md-4 g-4">
+			<div class="col">
+				<div class="card">
+				<img src="grape.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">Card title</h5>
+					<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+				</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card">
+				<img src="grape.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">Card title</h5>
+					<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+				</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card">
+				<img src="grape.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">Card title</h5>
+					<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+				</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card">
+				<img src="grape.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">Card title</h5>
+					<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 
+		2カラムレイアウト
+	-->
+	<div class="container container-m">
+		<div class="row">
+			<div class="col-md-4">
+				<img src="banana.jpg" alt="img" class="img-fluid">
+			</div>
+			<div class="col-md-8 aquamarine">
+				<h1>Sample Text</h1>
+				<p>Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- 
+		3カラムレイアウト
+	-->
+	<div class="container container-m">
+		<div class="row">
+			<div class="col-md-4">
+				<img src="melon.jpg" alt="img" class="img-fluid">
+			</div>
+			<div class="col-md-4">
+				<img src="melon.jpg" alt="img" class="img-fluid">
+			</div>
+			<div class="col-md-4">
+				<img src="melon.jpg" alt="img" class="img-fluid">
+			</div>
+		</div>
+	</div>
+
+	<!-- 
 		containerクラス
 			画面サイズによって横幅が異なる（メディアクエリが設定されている。）
 			全体は画面中央に配置される。
@@ -37,22 +162,33 @@
 
 		img-fluidクラス
 			画像の幅を親要素からはみ出さない用に設定してくれる。
+			max-width（最大幅）が100％の指定がされている。
 	-->
-	<div class="container">
+	<div class="container yellow">
 		container
 	</div>
 
-	<div class="container-fluid">
-		<div class="row">
+	<div class="container-fluid aquamarine">
+		<div class="row burlywood">
 			<div class="col-md-6 col-xl-4">
 				<img src="grapefruits.jpg" alt="" class="img-fluid">
 			</div>
-			<div class="col-md-6 col-xl-8">
+			<div class="col-md-6 col-xl-8 bisque">
 				768px以上は6, 1200px以上は8占有
 			</div>
 		</div>
 		container-fluid
 	</div>
+
+	<!-- 
+		フッター
+
+		footerクラスは自作。
+	-->
+	<footer class="footer container-m">
+		© 2025 Bootstrap test
+	</footer>
+
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>

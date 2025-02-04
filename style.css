@@ -1,15 +1,30 @@
-.container {
+.yellow {
 	background-color: yellow;
 }
 
-.container-fluid {
+.aquamarine {
 	background-color: aquamarine;
 }
 
-.row {
+.burlywood {
 	background-color: burlywood;
 }
 
-.col-md-6 {
+.bisque {
 	background-color: bisque;
+}
+
+.img-hidden {
+	max-height: 300px;
+	overflow: hidden;
+}
+
+.container-m {
+	margin-top: 80px;
+}
+
+.footer{
+	background-color: #f8f9fa;
+	text-align: center;
+	padding: 1rem;
 }
