@@ -12,28 +12,96 @@
 		ナビゲーションの見本をBootStrapの公式ページからそのままコピーして使うことが可能。
 		https://skillhub.jp/courses/230/lessons/1640
 		https://getbootstrap.jp/docs/5.3/components/navbar/
+
+		navbar クラス
+			ナビゲーションバーのベースとなるCSSクラス
+			必須。
+
+		navbar-expand-lg クラス
+			コンテンツの折り畳み・展開タイミングを決めるCSSクラス
+			レスポンシブな動作の設定。
+
+			navbar-expandクラスにはメニューのli要素を並べて表示する（展開する）役割があります。
+			-で繋げてBoostrapのブレークポイント名をつけると「画面幅が〇〇px以上なら、メニューを並べて表示する」という指定ができます。
+			navbar-expandをつけなかった場合は、PC画面の横幅でも、各項目が展開表示されずにトグル表示となる。
+			
+		bg-body-tertiary クラス
+			ナビゲーションバーの背景色を決めるCSSクラス
+
+		navbar-brand クラス
+			ロゴやサイト名などの部分を書くときに使用します。
+			文字のみでサイト名を入れるのであれば「Navbar」というテキスト部分を書き換えればOKです。
+			画像を使いたい場合は「Navbar」というテキスト部分を、imgタグに置き換えてください。
+
+			場合によっては、画像とテキストを両方並べたいこともあるでしょう。
+			その場合はimgタグにd-inline-blockとalign-text-topというクラスを設定します。どちらもBootstrapのクラスです。
+			そして、imgタグの後にテキストを書きます。
+		
+		nav-item(メニュー項目)
+			ナビゲーションバーに設置したいメニューは、<ul class="navbar-nav">内に入れていくことになります。
+
+		背景色（どの機能にも使える）
+			https://getbootstrap.jp/docs/5.3/utilities/background/
+
+			class="bg-secondary-subtle"　とかで灰色になる。
+
+			任意の背景色にするときは、自分でbackground-colorでスタイル指定する。
+
+		ナビゲーションの配色
+			https://getbootstrap.jp/docs/5.3/components/navbar/#%E9%85%8D%E8%89%B2
+
+			<nav>タグにdata-bs-theme="dark"という属性を加えると、暗い背景色向けの配色に変わる
+		
+		fixed-top クラス
+			位置固定表示をさせることができる。
+			ただ、「fixed-top」クラスを追加すると、そのクラスを付与した要素（ナビゲーションとか）が浮かんだような状態になるため、
+			ナビゲーションと、画像上部とが、重なって表示されている形になる。
+			その場合は、下にかぶさっている要素（ヒーローイメージ）に対して、ナビゲーションの高さと同じだけのpadding-topを付与する。
 	-->
-	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+	<nav data-bs-theme="dark" class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="#">Navbar</a>
+			<a class="navbar-brand" href="#">
+				<!-- <img src="grape.jpg" alt="" class="d-inline-block align-text-top img-fluid"> -->
+				Navbar
+			</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
+				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNav">
-			<ul class="navbar-nav">
-				<li class="nav-item">
-				<a class="nav-link active" aria-current="page" href="#">Home</a>
-				</li>
-				<li class="nav-item">
-				<a class="nav-link" href="#">Features</a>
-				</li>
-				<li class="nav-item">
-				<a class="nav-link" href="#">Pricing</a>
-				</li>
-				<li class="nav-item">
-				<a class="nav-link disabled">Disabled</a>
-				</li>
-			</ul>
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Features</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Pricing</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled">Disabled</a>
+					</li>
+					<!-- 
+						dropdown
+							ドロップダウンを使いたい場合は、<li>タグのnav-itemクラスと合わせて「dropdown」というクラスも記述します。
+							そして、<li>タグの中に<ul>～</ul>で囲ったリストをもう一つ入れ子にします。
+					-->
+					<li class="nav-item dropdown">
+						<!-- この常に表示されるメニュー名のhrefは#のままにしておく。#以外にするとドロップダウンが開かなくなってしまう。 -->
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Dropdown
+						</a>
+						<!-- dropdown-menu　・・・　ドロップダウン内のメニューを作るためのCSSクラス -->
+						<ul class="dropdown-menu">
+							<!-- dropdown-item　・・・・　ドロップダウンが開いた時に表示される項目 -->
+							<li><a class="dropdown-item" href="#">Action</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<!-- dropdown-divider　・・・　ドロップダウン内に仕切りをつけるためのCSSクラス -->
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#">Something else here</a></li>
+						</ul>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</nav>
