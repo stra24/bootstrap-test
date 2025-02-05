@@ -386,6 +386,42 @@
 	</form>
 
 	<!-- 
+		ボタンを作るためのコーディング3パターン	
+			button要素
+				フォームの送信ボタンで使用。フォームでは、inputよりbutton要素のほうが一般的。
+				type属性値について
+					submit＝送信（フォームで使う場合はこちら）
+					button＝汎用的に使えるボタン
+
+			input要素
+				フォームの送信ボタンで使用。
+			a要素
+				ボタン風のデザインにするという意味合いで使用
+
+		Bootstrapでボタンを作る場合
+			btn というCSSクラスを使う。
+		
+		ボタンの色
+			https://getbootstrap.jp/docs/5.3/components/buttons/
+			btn-Bootstrapの色名
+			例：btn-primary
+		
+		ボタンのサイズ
+			小：btn-sm
+			中：指定なし
+			大：btn-lg
+
+		ボタンを全幅表示にする場合
+			ボタンを親要素の幅いっぱいに表示するにはw-100クラスを使うとできます。
+			.w-100は、width: 100%;を指定するユーティリティクラスです。
+	-->
+	<div class="mt-5"></div>
+	<button type="submit" class="btn btn-primary btn-sm">ボタン1</button>
+	<input type="button" class="btn btn-primary" value="ボタン2">
+	<a href="#" class="btn btn-primary btn-lg">ボタン3</a>
+
+	
+	<!-- 
 		フッター
 
 		footerクラスは自作。
