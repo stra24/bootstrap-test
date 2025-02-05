@@ -339,6 +339,53 @@
 	</div>
 
 	<!-- 
+		フォーム
+			https://getbootstrap.jp/docs/5.3/forms/overview/
+
+		labelタグ
+			入力欄のキャプション（説明）
+
+		inputタグ
+			入力欄などの部品を設置する
+
+		aria-describedby属性
+			スクリーンリーダー（読み上げソフト）利用者に説明するためのもの
+			aria-describedbyの属性値をid属性値として持っているdivについては、inputタグで作ったメールアドレス入力欄の補足説明として使ってね、という指示をしている。
+			参照する要素がない場合は、aria-describedbyは削除していい。
+		
+		form-label というクラス
+			余白を調整するBootstrapのCSSクラス。
+
+		form-control というクラス
+			入力欄のサイズ調整などを行うBootstrapのCSSクラス。
+			このクラスが、入力個所をきれいにスタイリングしてくれる。
+			幅が親要素の100％になってlabelと縦並びになったり、入力欄しようとした時にハイライト表示されたりと、見やすく・使いやすくするための設定をBootstrapがしてくれています。
+
+			form-control：標準サイズ（デフォルト）
+			form-control-sm：高さを標準より小さくする
+			form-control-lg：高さを標準より大きくする
+
+		form-text というクラス
+			文字サイズ・余白などを調整するBootstrapのCSSクラス。
+	-->
+	<form>
+		<div class="mb-3">
+			<label for="exampleInputEmail1" class="form-label">Email address</label>
+			<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+			<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+		</div>
+		<div class="mb-3">
+			<label for="exampleInputPassword1" class="form-label">Password</label>
+			<input type="password" class="form-control" id="exampleInputPassword1">
+		</div>
+		<div class="mb-3 form-check">
+			<input type="checkbox" class="form-check-input" id="exampleCheck1">
+			<label class="form-check-label" for="exampleCheck1">Check me out</label>
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+
+	<!-- 
 		フッター
 
 		footerクラスは自作。
