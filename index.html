@@ -585,6 +585,50 @@
 	  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-1-circle" viewBox="0 0 16 16">
 		<path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M9.283 4.002V12H7.971V5.338h-.065L6.072 6.656V5.385l1.899-1.383z"/>
 	  </svg>
+
+	  <!-- 
+	 	アラート
+	  		https://getbootstrap.jp/docs/5.0/components/alerts/
+
+		閉じるボタン付きのアラート
+	  		https://getbootstrap.jp/docs/5.0/components/alerts/#dismissing
+
+		alert-warning
+	  		アラートの配色
+
+		alert-dismissible
+	  		アラートを閉じるためのクラス
+
+		fade show
+	  		アラートを閉じるときに、フェードでゆっくり消えるようにするクラス
+
+		btn-close
+	  		アラートを閉じるためのクラス
+
+		data-bs-dismiss="alert"
+	  		JavaScriptを使うための属性
+
+		aria-label="Close"
+	  		音声読み上げシステムなどに情報を与えるためのクラス
+
+		alert-link
+	  		アラートの配色とリンクの色に違和感が出ないよう、アラート内リンク用のCSSクラス「alert-link」が用意されています。
+
+		alert-heading
+	  		アラートの見出しのためのクラス
+	  -->
+
+	  <div class="alert alert-primary" role="alert">
+		A simple primary alert—check it out!
+	  </div>
+
+	  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+		<h4 class="alert-heading">見出し</h4>
+		<hr>
+		<strong>Holy guacamole!</strong> You should check in on <a href="#" class="alert-link">リンク</a>some of those fields below.
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	  </div>
+
 	<!-- 
 		フッター
 
