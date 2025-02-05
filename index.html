@@ -187,7 +187,7 @@
 	<!-- 
 		3カラムレイアウト
 	-->
-	<div class="container container-m">
+	<div class="container mt-5">
 		<div class="row">
 			<div class="col-md-4">
 				<img src="melon.jpg" alt="img" class="img-fluid">
@@ -246,6 +246,84 @@
 			</div>
 		</div>
 		container-fluid
+	</div>
+
+	<!-- 
+		ユーティリティ
+			単体のスタイル指定のみが設定されたクラスのこと。
+			https://skillhub.jp/courses/230/lessons/1646
+
+		コンポーネント
+			複数のスタイル指定がされたクラス。何か一つの部品をつくるためのもの。
+
+		余白
+			mt-md-5
+			このように「余白の種類・方向・ブレークポイント・サイズ」の順で指定します。
+
+		テキストの配置
+			text-md-center
+			text-end
+
+		テキストの太さ
+			https://getbootstrap.jp/docs/5.3/utilities/text/
+
+			fw-bold
+			fw-normal
+			fw-light
+
+		テキストの色
+			https://getbootstrap.jp/docs/5.3/utilities/colors/
+
+			text-bootstrapの色名　という形になっている。
+				text-primary
+
+		テキストを省略する
+			text-truncate
+
+			text-end
+	-->
+	<div class="mt-md-5 text-md-center fw-bold text-primary">
+		ユーティリティのテスト
+	</div>
+	<div class="text-truncate w-25 bg-secondary-subtle">
+		ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+	</div>
+
+	<!-- 
+		d-flex
+			display: flex;を意味する。
+			フレックスボックスを作ることができる。
+
+		フレックスアイテムの並べ方
+			flex-row
+				左から要素を横並びにする。
+			flex-row-reverse
+				右から要素を横並びにする。
+			flex-column
+				上から要素を縦並びにする。
+
+		フレックスボックス全体の揃え位置（flex-rowの場合はx軸方向の揃え位置。flex-columnの場合はy軸方向の揃え位置。）
+			justify-content-center
+				中央揃えにする。
+			justify-content-between
+				両端に合わせ均等
+			justify-content-around
+				両端に合わせ均等
+	-->
+	<div class="d-flex flex-row justify-content-center">
+		<div>要素1</div>
+		<div>要素2</div>
+		<div>center</div>
+	</div>
+	<div class="d-flex flex-row justify-content-between">
+		<div>要素1</div>
+		<div>要素2</div>
+		<div>between</div>
+	</div>
+	<div class="d-flex flex-row justify-content-around">
+		<div>要素1</div>
+		<div>要素2</div>
+		<div>around</div>
 	</div>
 
 	<!-- 
