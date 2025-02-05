@@ -492,6 +492,64 @@
 	  </div>
 
 	<!-- 
+		タイポグラフィ（文字の体裁）
+	  		https://getbootstrap.jp/docs/5.3/content/typography/
+
+	  		Bootstrapでは、h〇タグ自体にCSSが適用されている。
+			h1～h6というCSSクラスも用意されている。
+			h1タグとh1クラスはまったく同じ見栄えになる。
+	-->
+	<h1>h1見出し</h1>
+	<h2>h2見出し</h2>
+	<h3>h3見出し</h3>
+	<h4>h4見出し</h4>
+	<h5>h5見出し</h5>
+	<h6>h6見出し</h6>
+	<p>p本文</p>
+
+	<p class="h1">pによるh1見出し</p>
+	<p class="h2">pによるh2見出し</p>
+	<p class="h3">pによるh3見出し</p>
+	<p class="h4">pによるh4見出し</p>
+	<p class="h5">pによるh5見出し</p>
+	<p class="h6">pによるh6見出し</p>
+
+	<!-- 
+	  display-〇 というクラスは特大サイズになる。
+	  文字はfont-weight: 300;で細め。
+
+	  display-6とh1の文字サイズが同じ。
+
+	  h〇クラスやdisplay-〇クラスは単位がremとなっている。h1は2.5remなので、16 * 2.5 = 40px
+	-->
+	<p class="display-1">特大サイズ1</p>
+	<p class="display-2">特大サイズ2</p>
+	<p class="display-3">特大サイズ3</p>
+	<p class="display-4">特大サイズ4</p>
+	<p class="display-5">特大サイズ5</p>
+	<p class="display-6">特大サイズ6</p>
+
+	<!-- 
+	  文字を目立たせる
+	  	leadクラス
+	  		lead クラスには、1.25remが設定されている。
+
+		strongタグ
+	  		太字になる。
+			fw-bold クラスと同じ効果。
+
+	  	markタグ or markクラス
+	  		ハイライトを入れることができる。
+
+	  すべてを覚える必要はない。
+	-->
+	<p>サンプルテキストサンプルテキスト<span class="lead">ここで目立たせたい</span>サンプルテキストサンプルテキスト</p>
+	<p>サンプルテキストサンプルテキスト<strong>ここで目立たせたい</strong>サンプルテキストサンプルテキスト</p>
+	<p>サンプルテキストサンプルテキスト<span class="mark">ここで目立たせたい</span>サンプルテキストサンプルテキスト</p>
+
+
+
+	<!-- 
 		フッター
 
 		footerクラスは自作。
