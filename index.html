@@ -617,7 +617,6 @@
 		alert-heading
 	  		アラートの見出しのためのクラス
 	  -->
-
 	  <div class="alert alert-primary" role="alert">
 		A simple primary alert—check it out!
 	  </div>
@@ -628,6 +627,79 @@
 		<strong>Holy guacamole!</strong> You should check in on <a href="#" class="alert-link">リンク</a>some of those fields below.
 		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 	  </div>
+
+	<!-- 
+	  	モーダル
+	  		https://getbootstrap.jp/docs/5.3/components/modal/
+
+			モーダルではプラグイン（拡張機能を使う為のプログラム）を使用しています。
+
+			Bootstrpでのモーダルは、ボタンがクリックされるとモーダルが表示される仕組みになっています。
+			ですので、最初にボタンタグが出てきます。
+			ボタンタグ内にはボタンに表示させる文言を書きます。
+
+			data-bs-toggle="modal"　は、拡張機能を使うための属性で、「使用する拡張機能はモーダルとする」ということを指定している。
+
+			data-bs-target="#exampleModal"と一致するid属性を持つモーダルが表示される。
+	-->
+	<!-- モーダルを画面に出現させるボタン -->
+	<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+		Launch demo modal
+	</button>
+
+	<!-- 
+		モーダルの本体部分 
+
+		modal クラス
+			モーダルを表示する場所を確保するクラス。
+		fade クラス
+			フェード（ゆっくり）表示する
+
+		表示領域全体（画面全体）を覆って、表示場所を確保している。
+	-->
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<!-- 
+			modal-dialog・・・モーダル本体を作るためのクラス 
+
+			モーダルの大きさを変えるには
+				modal-sm
+				指定なし
+				modal-lg
+				modal-xl
+
+				各サイズはブレークポイントとも連動している。
+				例えば、modal-xlを指定していても、スマホ幅では指定なしと同じサイズになる。
+
+			モーダルを画面中央に配置するには
+				modal-dialog-centered
+
+		-->
+		<div class="modal-dialog modal-dialog-centered">
+			<!-- 
+				モーダルのコンテンツ 
+				modal-content
+					モーダル内の表示内容（テキスト等）を囲うためのクラス
+			-->
+			<div class="modal-content">
+				<!-- modal-header・・・モーダル内上部を作るためのクラス -->
+				<div class="modal-header">
+					<!-- modal-title・・・モーダル内の見出しを作るためのクラス -->
+					<h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+					<!-- data-bs-dismiss="modal"・・・拡張機能を使いモーダルを閉じるための属性 -->
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<!-- modal-body・・・モーダル内で、本文などを囲うためのクラス -->
+				<div class="modal-body">
+					...
+				</div>
+				<!-- modal-footer・・・モーダル内下部を作るためのクラス -->
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- 
 		フッター
