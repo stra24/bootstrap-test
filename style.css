@@ -17,8 +17,11 @@
 .img-hidden {
 	max-height: 300px;
 	overflow: hidden;
+}
+
+.pt-56 {
 	/* ナビゲーションに隠れてしまうため、ナビゲーションの高さだけ余白をつけている */
-	padding-top: 56px; 
+	padding-top: 56px;
 }
 
 .container-m {
