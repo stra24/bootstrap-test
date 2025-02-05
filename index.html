@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -548,7 +549,42 @@
 	<p>サンプルテキストサンプルテキスト<span class="mark">ここで目立たせたい</span>サンプルテキストサンプルテキスト</p>
 
 
+	<!-- 
+	  Bootstrapアイコン
+	  	Bootstrapで用意されているアイコンライブラリ。
+	  	https://icons.getbootstrap.jp/
 
+		アイコンを表示させる方法は3つある。
+	  		（１）アイコンの詳細画面でsvgファイルをダウンロードして、それをimgタグで表示する方法
+	  				<img src="1-circle.svg" alt="">
+
+	  		（２）Webアイコンフォントを表示する方法（オススメ）
+	  				Web経由でフォントデータを読み込んで文字を表示させる仕組み。
+					通常の文字と同じく、CSSのfont-sizeプロパティでサイズを変更したり、colorプロパティで色を変えることが出来ます。
+
+					https://icons.getbootstrap.jp/　からインストールリンクを押下。
+					CDNをコピーしてhead要素に貼り付ける。
+	  				アイコンの詳細画面でからi要素をコピーして画面に表示する。
+	  					<i class="bi bi-1-circle"></i>
+
+	  		（３）HTMLに直接コードを書く（SVGタグ）方法
+
+		ホバーアクションも用意されている。
+	  		アイコンと文字をaタグで囲い、aタグに
+			・icon-link・・・アイコンとリンクテキスト（下線付き）をきれいに並べるためのCSSクラス
+			・icon-link-hover・・・マウスオーバー時にアイコンを右に移動するCSSクラス。icon-linkをセットで使わないと機能しない。
+			を指定するだけ。
+				
+			リンクテキストの下線を削除したい場合はtext-decoration-noneクラスを加えます。
+			アイコンと文字の位置（縦方向揃え）がズレているように感じたら、align-items-baselineなどのクラスを使って調整すると良いでしょう。
+	-->
+	  <img src="1-circle.svg" alt="">
+	  <a class="icon-link icon-link-hover">
+		<i class="bi bi-1-circle h1"></i>
+	  </a>
+	  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-1-circle" viewBox="0 0 16 16">
+		<path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M9.283 4.002V12H7.971V5.338h-.065L6.072 6.656V5.385l1.899-1.383z"/>
+	  </svg>
 	<!-- 
 		フッター
 
